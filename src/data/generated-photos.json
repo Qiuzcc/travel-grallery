@@ -1,0 +1,102 @@
+{
+  "cities": [
+    {
+      "name": "北京市",
+      "lat": 39.904179,
+      "lng": 116.407387,
+      "photos": [
+        {
+          "id": "IMG20260416133019",
+          "src": "/gallery/北京市/IMG20260416133019.jpg",
+          "thumbnail": "/gallery/北京市/thumbnails/IMG20260416133019_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-04-16",
+          "lat": 40.07833055555556,
+          "lng": 116.32655555555556,
+          "location": "北京市昌平区龙泽园街道风雅园(三区)汇佳幼儿园新一园",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260416154921",
+          "src": "/gallery/北京市/IMG20260416154921.jpg",
+          "thumbnail": "/gallery/北京市/thumbnails/IMG20260416154921_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-04-16",
+          "lat": 39.64264444444444,
+          "lng": 116.80370555555555,
+          "location": "北京市通州区永乐店镇觅后路",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260416170141",
+          "src": "/gallery/北京市/IMG20260416170141.jpg",
+          "thumbnail": "/gallery/北京市/thumbnails/IMG20260416170141_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-04-16",
+          "lat": 39.09592222222223,
+          "lng": 117.56478333333332,
+          "location": "天津市滨海新区北塘街道新环东路天津经济技术开发区西区",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260416170151",
+          "src": "/gallery/北京市/IMG20260416170151.jpg",
+          "thumbnail": "/gallery/北京市/thumbnails/IMG20260416170151_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-04-16",
+          "lat": 39.09592222222223,
+          "lng": 117.56478333333332,
+          "location": "天津市滨海新区北塘街道新环东路天津经济技术开发区西区",
+          "aspectRatio": "portrait"
+        }
+      ]
+    },
+    {
+      "name": "威海市",
+      "lat": 37.513315,
+      "lng": 122.120519,
+      "photos": [
+        {
+          "id": "DJI_20260419151435_0039_D",
+          "src": "/gallery/威海市/DJI_20260419151435_0039_D.JPG",
+          "thumbnail": "/gallery/威海市/thumbnails/DJI_20260419151435_0039_D_thumb.jpg",
+          "title": "布鲁维斯号",
+          "description": "这是一段描述",
+          "date": "2026-04-19",
+          "lat": 37.401236527777776,
+          "lng": 122.54725986111112,
+          "location": "山东省威海市荣成市成山镇蜜雪冰城(蔚蓝果冻海店)",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260420181034_0025_D",
+          "src": "/gallery/威海市/DJI_20260420181034_0025_D.JPG",
+          "thumbnail": "/gallery/威海市/thumbnails/DJI_20260420181034_0025_D_thumb.jpg",
+          "title": "荣成市区的日落",
+          "description": "这是一段描述",
+          "date": "2026-04-20",
+          "lat": 37.10301525,
+          "lng": 122.46395766666667,
+          "location": "山东省威海市荣成市崂山街道海湾南路",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260420181049_0027_D",
+          "src": "/gallery/威海市/DJI_20260420181049_0027_D.JPG",
+          "thumbnail": "/gallery/威海市/thumbnails/DJI_20260420181049_0027_D_thumb.jpg",
+          "title": "航拍荣成",
+          "description": "这是一段描述",
+          "date": "2026-04-20",
+          "lat": 37.10301413888889,
+          "lng": 122.46395705555555,
+          "location": "山东省威海市荣成市崂山街道海湾南路",
+          "aspectRatio": "landscape"
+        }
+      ]
+    }
+  ]
+}
