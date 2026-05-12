@@ -1215,6 +1215,85 @@
           "aspectRatio": "portrait"
         }
       ]
+    },
+    {
+      "name": "常州市",
+      "lat": 31.811313,
+      "lng": 119.974092,
+      "photos": [
+        {
+          "id": "IMG20260506190450",
+          "src": "/gallery/常州市/IMG20260506190450.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/IMG20260506190450_thumb.jpg",
+          "title": "孟河镇的晚霞",
+          "description": "到达常州的第一晚，在酒店把行李放好之后，步行出来去找饭店吃饭，刚好傍晚时分，拍下了这美丽的晚霞",
+          "date": "2026-05-06",
+          "lat": 32.00199166666667,
+          "lng": 119.84850277777777,
+          "location": "江苏省常州市新北区孟河镇239省道孟河星光城购物中心(嘉宏MOOC星光城店)",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260507101258",
+          "src": "/gallery/常州市/IMG20260507101258.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/IMG20260507101258_thumb.jpg",
+          "title": "孟河大桥下的货轮",
+          "description": "这条小江连接到长江，距这里十几公里往外就是长江，江上停靠往来的货轮非常密集",
+          "date": "2026-05-07",
+          "lat": 32.003166666666665,
+          "lng": 119.84586944444445,
+          "location": "江苏省常州市新北区孟河镇东尧路92号",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260508161425",
+          "src": "/gallery/常州市/IMG20260508161425.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/IMG20260508161425_thumb.jpg",
+          "title": "常泰长江大桥",
+          "description": "从桥下仰视横跨长江的大桥，颇为壮观",
+          "date": "2026-05-08",
+          "lat": 32.00333611111111,
+          "lng": 119.95984444444444,
+          "location": "江苏省常州市新北区魏村街道乌龟墩录安洲生态林",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260510175400",
+          "src": "/gallery/常州市/IMG20260510175400.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/IMG20260510175400_thumb.jpg",
+          "title": "不知名河畔",
+          "description": "酒店旁边的一条江河，一直没能在地图上发现它的名字，傍晚到这里散步",
+          "date": "2026-05-10",
+          "lat": 32.00716666666667,
+          "lng": 119.8514361111111,
+          "location": "江苏省常州市新北区孟河镇市场中路",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260510185341",
+          "src": "/gallery/常州市/IMG20260510185341.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/IMG20260510185341_thumb.jpg",
+          "title": "比邻川菜小炒",
+          "description": "孟河镇的街道两旁，餐馆非常多，选了一家叫“比邻川菜小炒”的餐馆，点了两个菜",
+          "date": "2026-05-10",
+          "lat": 32.011469444444444,
+          "lng": 119.84898333333332,
+          "location": "江苏省常州市新北区孟河镇富平路江苏先昌公司",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DOUYIN_LP_1778331321588",
+          "src": "/gallery/常州市/DOUYIN_LP_1778331321588.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/DOUYIN_LP_1778331321588_thumb.jpg",
+          "title": "常泰长江大桥",
+          "description": "感冒初愈，在酒店待着烦闷，在高德上找了一个叫“常泰大桥打卡点”的位置，骑了十几公里过来透透气；偶遇一位常州本地的摩友，一起聊了聊，那位摩友临走之前拍下了这张照片，后面通过抖音给我分享了过来",
+          "date": "",
+          "lat": 0,
+          "lng": 0,
+          "location": "常泰大桥打卡点",
+          "aspectRatio": "landscape"
+        }
+      ]
     }
   ]
 }
