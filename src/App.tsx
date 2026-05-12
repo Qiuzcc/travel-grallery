@@ -52,17 +52,17 @@ function App() {
       <Hero cities={galleryData.cities} />
 
       {/* Map section */}
-      <section className="container mx-auto px-6 pt-16 pb-12">
-        <div className="flex items-center gap-4 mb-8">
+      <section className="container mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-12">
+        <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <div className="section-divider flex-1" />
-          <h2 className="text-sm font-semibold text-foreground/70 tracking-[0.2em] uppercase">骑行路线</h2>
+          <h2 className="text-xs sm:text-sm font-semibold text-foreground/70 tracking-[0.2em] uppercase">骑行路线</h2>
           <div className="section-divider flex-1" />
         </div>
 
         <div className="relative">
           {/* Ambient glow behind map */}
           <div className="absolute -inset-4 rounded-3xl bg-amber-glow/[0.02] blur-3xl" />
-          <div className="map-container relative h-[400px] md:h-[500px] lg:h-[550px]">
+          <div className="map-container relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
             <MapView
               routePoints={routePoints}
               cities={cities}
@@ -81,12 +81,12 @@ function App() {
       />
 
       {/* Footer */}
-      <footer className="container mx-auto px-6 pt-8 pb-16 text-center">
-        <div className="section-divider mb-12" />
+      <footer className="container mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-12 sm:pb-16 text-center">
+        <div className="section-divider mb-8 sm:mb-12" />
         <p className="text-sm text-muted-foreground/70">
           摩旅影像记录
         </p>
-        <p className="text-xs text-muted-foreground/40 mt-3">
+        <p className="text-xs text-muted-foreground/40 mt-2 sm:mt-3">
           照片均由旅途中拍摄，GPS坐标来自相机EXIF数据
         </p>
       </footer>

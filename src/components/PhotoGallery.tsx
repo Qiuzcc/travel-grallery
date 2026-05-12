@@ -65,29 +65,29 @@ export function PhotoGallery({ cities, activeCityIndex, onCityChange, onPhotoCli
   }
 
   return (
-    <section className="container mx-auto px-6 pt-20 pb-12">
-      <div className="flex items-center gap-4 mb-10">
+    <section className="container mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12">
+      <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
         <div className="section-divider flex-1" />
-        <h2 className="text-sm font-semibold text-foreground/70 tracking-[0.2em] uppercase">旅途影像</h2>
+        <h2 className="text-xs sm:text-sm font-semibold text-foreground/70 tracking-[0.2em] uppercase">旅途影像</h2>
         <div className="section-divider flex-1" />
       </div>
 
       {/* City navigation - glass panel */}
-      <div className="glass-panel rounded-2xl p-5 mb-12">
-        <div className="flex items-center justify-between">
+      <div className="glass-panel rounded-2xl p-3 sm:p-5 mb-8 sm:mb-12">
+        <div className="flex items-center justify-between gap-2">
           <button
             onClick={handlePrevCity}
             disabled={activeCityIndex === 0}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium transition-all border bg-white/[0.05] border-white/[0.08] text-foreground hover:bg-amber-glow/[0.1] hover:border-amber-glow/[0.2] hover:text-primary disabled:opacity-20 disabled:pointer-events-none"
+            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all border bg-white/[0.05] border-white/[0.08] text-foreground hover:bg-amber-glow/[0.1] hover:border-amber-glow/[0.2] hover:text-primary disabled:opacity-20 disabled:pointer-events-none shrink-0"
           >
             <ChevronLeft className="h-4 w-4" />
-            上一站
+            <span className="hidden sm:inline">上一站</span>
           </button>
 
-          <div className="flex items-center gap-3">
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="text-base font-bold text-foreground">{activeCity?.name}</span>
-            <span className="text-xs text-primary bg-primary/[0.1] rounded-full px-2.5 py-0.5 font-medium">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <MapPin className="h-4 w-4 text-primary shrink-0" />
+            <span className="text-sm sm:text-base font-bold text-foreground truncate">{activeCity?.name}</span>
+            <span className="text-xs text-primary bg-primary/[0.1] rounded-full px-2 sm:px-2.5 py-0.5 font-medium shrink-0">
               {activeCityIndex + 1}/{cities.length}
             </span>
           </div>
@@ -95,9 +95,9 @@ export function PhotoGallery({ cities, activeCityIndex, onCityChange, onPhotoCli
           <button
             onClick={handleNextCity}
             disabled={activeCityIndex === cities.length - 1}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium transition-all border bg-white/[0.05] border-white/[0.08] text-foreground hover:bg-amber-glow/[0.1] hover:border-amber-glow/[0.2] hover:text-primary disabled:opacity-20 disabled:pointer-events-none"
+            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all border bg-white/[0.05] border-white/[0.08] text-foreground hover:bg-amber-glow/[0.1] hover:border-amber-glow/[0.2] hover:text-primary disabled:opacity-20 disabled:pointer-events-none shrink-0"
           >
-            下一站
+            <span className="hidden sm:inline">下一站</span>
             <ChevronRight className="h-4 w-4" />
           </button>
         </div>
@@ -109,7 +109,7 @@ export function PhotoGallery({ cities, activeCityIndex, onCityChange, onPhotoCli
         <div className="timeline-line hidden md:block" />
 
         {/* Date groups */}
-        <div className="space-y-16">
+        <div className="space-y-10 sm:space-y-16">
           {dateGroups.map((group, groupIndex) => (
             <div
               key={group.date}
@@ -146,15 +146,15 @@ export function PhotoGallery({ cities, activeCityIndex, onCityChange, onPhotoCli
       </div>
 
       {/* City dots indicator */}
-      <div className="flex justify-center gap-2 mt-14">
+      <div className="flex justify-center flex-wrap gap-1.5 sm:gap-2 mt-10 sm:mt-14">
         {cities.map((city, index) => (
           <button
             key={city.name}
             onClick={() => onCityChange(index)}
             className={`rounded-full transition-all duration-300 ${
               index === activeCityIndex
-                ? 'bg-primary w-8 h-2.5 shadow-[0_0_12px_hsl(var(--amber)/0.4)]'
-                : 'bg-white/[0.15] w-2.5 h-2.5 hover:bg-white/[0.3]'
+                ? 'bg-primary w-6 sm:w-8 h-2 sm:h-2.5 shadow-[0_0_12px_hsl(var(--amber)/0.4)]'
+                : 'bg-white/[0.15] w-2 sm:w-2.5 h-2 sm:h-2.5 hover:bg-white/[0.3]'
             }`}
             title={city.name}
           />

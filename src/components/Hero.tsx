@@ -24,7 +24,7 @@ export function Hero({ cities }: HeroProps) {
   }, [cities])
 
   return (
-    <section className="relative h-[50vh] min-h-[340px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[45vh] sm:h-[50vh] min-h-[300px] sm:min-h-[340px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -39,24 +39,24 @@ export function Hero({ cities }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-8 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 animate-fade-in text-foreground drop-shadow-[0_2px_16px_rgba(0,0,0,0.5)]">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-6 sm:py-8 text-center">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-5 sm:mb-6 animate-fade-in text-foreground drop-shadow-[0_2px_16px_rgba(0,0,0,0.5)]">
           骑行在路上的
           <span className="text-gradient-amber"> 每一帧风景</span>
         </h1>
 
         {/* Glass stats bar */}
         <div
-          className="inline-flex items-center gap-0 rounded-2xl backdrop-blur-xl border border-white/[0.08] px-2 py-3 animate-fade-in"
+          className="inline-flex flex-wrap justify-center items-center gap-0 rounded-2xl backdrop-blur-xl border border-white/[0.08] px-2 py-2.5 sm:py-3 animate-fade-in"
           style={{ animationDelay: '0.2s', background: 'hsl(0 0% 100% / 0.04)', boxShadow: 'inset 0 1px 0 0 hsl(0 0% 100% / 0.06)' }}
         >
           {stats.map((stat, i) => (
             <div key={stat.label} className="flex items-center">
-              {i > 0 && <div className="w-px h-5 bg-white/[0.1] mx-4" />}
-              <div className="flex items-center gap-2 px-3">
-                <stat.icon className="h-4 w-4 text-primary" />
-                <span className="font-bold text-foreground">{stat.value}</span>
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
+              {i > 0 && <div className="w-px h-4 sm:h-5 bg-white/[0.1] mx-2 sm:mx-4" />}
+              <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3">
+                <stat.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
+                <span className="text-sm sm:text-base font-bold text-foreground">{stat.value}</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">{stat.label}</span>
               </div>
             </div>
           ))}
