@@ -1294,6 +1294,85 @@
           "aspectRatio": "landscape"
         }
       ]
+    },
+    {
+      "name": "江阴市",
+      "lat": 31.921642,
+      "lng": 120.284794,
+      "photos": [
+        {
+          "id": "IMG20260511145541",
+          "src": "/gallery/江阴市/IMG20260511145541.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511145541_thumb.jpg",
+          "title": "《徐霞客游记》徐澄抄本",
+          "description": "《游天台山日记》是徐霞客的第一篇游记，写于明万历四十一年（1613 年），是徐霞客一生旅行考察的起点，图中记录的是他从宁海出发，初游天台山的经历",
+          "date": "2026-05-11",
+          "lat": 31.712644444444443,
+          "lng": 120.31870833333333,
+          "location": "江苏省无锡市江阴市徐霞客镇奇松路江阴开益特种压缩机有限公司",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260511150627",
+          "src": "/gallery/江阴市/IMG20260511150627.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511150627_thumb.jpg",
+          "title": "徐霞客故居",
+          "description": "徐霞客出生于南直隶江阴，也就是今天的江苏省江阴市。2003 年，璜塘、马镇、峭岐三镇合并为霞客镇，2007 年定名为徐霞客镇。徐霞客对后世影响深远，中国旅游日 5.19，也正是源自于徐霞客游记的开篇日",
+          "date": "2026-05-11",
+          "lat": 31.712094444444443,
+          "lng": 120.31842499999999,
+          "location": "江苏省无锡市江阴市徐霞客镇奇松路8号江阴开益特种压缩机有限公司",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260511151348",
+          "src": "/gallery/江阴市/IMG20260511151348.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511151348_thumb.jpg",
+          "title": "徐霞客故居内的园林",
+          "description": "徐霞客故居内的园林内小巧精致、移步见景，院落内厅堂、天井、小园错落有致，借围墙、花木营造层次，空间紧凑却不显局促，庭院内有假山、有池塘、有花木、有亭台，层次丰富",
+          "date": "2026-05-11",
+          "lat": 31.711624999999998,
+          "lng": 120.31805,
+          "location": "江苏省无锡市江阴市徐霞客镇奇松路8号江阴开益特种压缩机有限公司",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260511151553",
+          "src": "/gallery/江阴市/IMG20260511151553.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511151553_thumb.jpg",
+          "title": "徐霞客雕像",
+          "description": "站在这位中国历史上伟大的旅行家面前，敬仰一下",
+          "date": "2026-05-11",
+          "lat": 31.711477777777777,
+          "lng": 120.31803055555555,
+          "location": "江苏省无锡市江阴市徐霞客镇奇松路10号江阴开益特种压缩机有限公司",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260511151643",
+          "src": "/gallery/江阴市/IMG20260511151643.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511151643_thumb.jpg",
+          "title": "当年明月的台历",
+          "description": "成功的方式只有一个，按照自己的方式，去度过一生",
+          "date": "2026-05-11",
+          "lat": 31.71121388888889,
+          "lng": 120.31818055555556,
+          "location": "江苏省无锡市江阴市徐霞客镇奇松路10号",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260511155841",
+          "src": "/gallery/江阴市/IMG20260511155841.jpg",
+          "thumbnail": "/gallery/江阴市/thumbnails/IMG20260511155841_thumb.jpg",
+          "title": "马镇邮局",
+          "description": "在徐霞客故居当地的邮局，留下一个独一无二的邮戳",
+          "date": "2026-05-11",
+          "lat": 31.716308333333334,
+          "lng": 120.317225,
+          "location": "江苏省无锡市江阴市徐霞客镇河西路",
+          "aspectRatio": "portrait"
+        }
+      ]
     }
   ]
 }
