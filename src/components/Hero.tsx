@@ -9,11 +9,15 @@ interface HeroProps {
 export function Hero({ cities }: HeroProps) {
   const stats = useMemo(() => {
     const totalPhotos = cities.reduce((sum, c) => sum + c.photos.length, 0)
-    const allDates = new Set(
-      cities.flatMap((c) => c.photos.map((p) => p.date)).filter(Boolean)
-    )
+    const allDates = cities.flatMap((c) => c.photos.map((p) => p.date)).filter(Boolean).sort()
+    let ridingDays = 0
+    if (allDates.length >= 2) {
+      const earliest = new Date(allDates[0])
+      const latest = new Date(allDates[allDates.length - 1])
+      ridingDays = Math.round((latest.getTime() - earliest.getTime()) / (1000 * 60 * 60 * 24))
+    }
     return [
-      { icon: Calendar, label: '骑行天数', value: `${allDates.size} 天` },
+      { icon: Calendar, label: '骑行天数', value: `${ridingDays} 天` },
       { icon: Camera, label: '照片总数', value: `${totalPhotos} 张` },
       { icon: MapPin, label: '途径城市', value: `${cities.length} 个` },
     ]

@@ -7,7 +7,7 @@ import { galleryData } from '@/data/photos'
 import type { PhotoItem } from '@/data/photos'
 
 function App() {
-  const [activeCityIndex, setActiveCityIndex] = useState(0)
+  const [activeCityIndex, setActiveCityIndex] = useState(galleryData.cities.length - 1)
   const [lightboxPhoto, setLightboxPhoto] = useState<PhotoItem | null>(null)
 
   const cities = useMemo(
