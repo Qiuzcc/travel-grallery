@@ -1246,6 +1246,18 @@
           "aspectRatio": "portrait"
         },
         {
+          "id": "DOUYIN_LP_1778331321588",
+          "src": "/gallery/常州市/DOUYIN_LP_1778331321588.jpg",
+          "thumbnail": "/gallery/常州市/thumbnails/DOUYIN_LP_1778331321588_thumb.jpg",
+          "title": "常泰长江大桥",
+          "description": "感冒初愈，在酒店待着烦闷，在高德上找了一个叫“常泰大桥打卡点”的位置，骑了十几公里过来透透气；偶遇一位常州本地的摩友，一起聊了聊，那位摩友临走之前拍下了这张照片，后面通过抖音给我分享了过来",
+          "date": "2026-05-08",
+          "lat": 0,
+          "lng": 0,
+          "location": "常泰大桥打卡点",
+          "aspectRatio": "landscape"
+        },
+        {
           "id": "IMG20260508161425",
           "src": "/gallery/常州市/IMG20260508161425.jpg",
           "thumbnail": "/gallery/常州市/thumbnails/IMG20260508161425_thumb.jpg",
@@ -1279,18 +1291,6 @@
           "lat": 32.011469444444444,
           "lng": 119.84898333333332,
           "location": "江苏省常州市新北区孟河镇富平路江苏先昌公司",
-          "aspectRatio": "landscape"
-        },
-        {
-          "id": "DOUYIN_LP_1778331321588",
-          "src": "/gallery/常州市/DOUYIN_LP_1778331321588.jpg",
-          "thumbnail": "/gallery/常州市/thumbnails/DOUYIN_LP_1778331321588_thumb.jpg",
-          "title": "常泰长江大桥",
-          "description": "感冒初愈，在酒店待着烦闷，在高德上找了一个叫“常泰大桥打卡点”的位置，骑了十几公里过来透透气；偶遇一位常州本地的摩友，一起聊了聊，那位摩友临走之前拍下了这张照片，后面通过抖音给我分享了过来",
-          "date": "",
-          "lat": 0,
-          "lng": 0,
-          "location": "常泰大桥打卡点",
           "aspectRatio": "landscape"
         }
       ]
