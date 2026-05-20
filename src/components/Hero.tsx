@@ -95,7 +95,7 @@ export function Hero({ cities }: HeroProps) {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/gallery/images/hero-bg.png"
+          src="/gallery/images/hero-bg.jpg"
           alt="摩旅风景"
           className="h-full w-full object-cover"
         />
