@@ -82,8 +82,21 @@ export function MapView({ routePoints, cities, activeCityIndex, onMarkerClick }:
 
       marker.on('mouseover', () => {
         const info = new AMap.InfoWindow({
-          content: `<div style="padding:6px 10px;font-size:13px;line-height:1.4;"><strong>${city.name}</strong></div>`,
-          offset: new AMap.Pixel(0, -size / 2 - 6),
+          isCustom: true,
+          content: `<div style="
+            padding:6px 12px;
+            font-size:13px;
+            line-height:1.4;
+            color:#fff;
+            background:rgba(30,30,30,0.85);
+            backdrop-filter:blur(8px);
+            border:1px solid rgba(255,255,255,0.15);
+            border-radius:8px;
+            box-shadow:0 4px 16px rgba(0,0,0,0.4);
+            white-space:nowrap;
+            font-weight:600;
+          ">${city.name}</div>`,
+          offset: new AMap.Pixel(0, -size / 2 - 10),
         })
         info.open(map, marker.getPosition())
       })

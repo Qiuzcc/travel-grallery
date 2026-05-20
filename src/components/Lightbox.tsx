@@ -80,26 +80,26 @@ export function Lightbox({ photo, photos, onClose, onNavigate }: LightboxProps) 
       )}
 
       {/* Image with glass frame */}
-      <div className="relative z-10 max-w-[95vw] sm:max-w-[90vw] max-h-[85vh] animate-scale-in px-2 sm:px-0">
-        <div className="p-0.5 sm:p-1 bg-white/[0.03] border border-white/[0.06] rounded-xl sm:rounded-2xl shadow-[0_24px_64px_-16px_hsl(222_30%_2%/0.7)]">
+      <div className="relative z-10 max-w-[95vw] sm:max-w-[90vw] max-h-[90vh] flex flex-col items-center animate-scale-in px-2 sm:px-0">
+        <div className="p-0.5 sm:p-1 bg-white/[0.03] border border-white/[0.06] rounded-xl sm:rounded-2xl shadow-[0_24px_64px_-16px_hsl(222_30%_2%/0.7)] flex-shrink-0">
           <img
             src={photo.src}
             alt={photo.title}
-            className="max-w-full max-h-[70vh] sm:max-h-[78vh] object-contain rounded-lg sm:rounded-xl"
+            className="max-w-full max-h-[60vh] sm:max-h-[68vh] object-contain rounded-lg sm:rounded-xl"
           />
         </div>
 
         {/* Photo info panel */}
         {(photo.title || photo.date || photo.location) && (
           <div
-            className="mt-3 sm:mt-4 p-3 sm:p-4 bg-white/[0.05] backdrop-blur-xl border border-white/[0.08] rounded-xl animate-slide-in-bottom"
+            className="mt-3 sm:mt-4 p-3 sm:p-4 bg-white/[0.05] backdrop-blur-xl border border-white/[0.08] rounded-xl animate-slide-in-bottom flex-shrink-0"
             style={{ animationDelay: '0.15s' }}
           >
             {photo.title && (
               <h3 className="text-base sm:text-lg font-bold text-foreground mb-0.5">{photo.title}</h3>
             )}
             {photo.description && (
-              <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-2.5">{photo.description}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-2.5 line-clamp-3">{photo.description}</p>
             )}
             <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
               {photo.date && (
@@ -109,8 +109,8 @@ export function Lightbox({ photo, photos, onClose, onNavigate }: LightboxProps) 
                 </div>
               )}
               {photo.location && (
-                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
-                  <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground flex-shrink-0">
+                  <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
                   {photo.location}
                 </div>
               )}
