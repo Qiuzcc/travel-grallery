@@ -110,6 +110,10 @@ async function run() {
   // 加载配置
   const config = loadEnv();
 
+  const prefix = (config.prefix || "gallery/").endsWith("/")
+    ? config.prefix || "gallery/"
+    : (config.prefix || "gallery/") + "/";
+
   if (!DRY_RUN) {
     const missing = [];
     if (!config.region) missing.push("OSS_REGION");
@@ -129,13 +133,22 @@ async function run() {
     }
   }
 
-  // 扫描文件并计算哈希
+  // 扫描 dist/gallery/ 下所有文件
   console.log(`扫描 dist/gallery/ ...\n`);
   const files = walkDir(DIST_DIR);
+
+  // 额外包含 dist/gallery.html（构建时从 dist/gallery/index.html 移出）
+  const galleryHtml = path.join(projectRoot, "dist", "gallery.html");
+  if (fs.existsSync(galleryHtml)) {
+    files.push({ fullPath: galleryHtml, ossKey: "gallery.html" });
+  }
+
   const currentManifest = {};
 
   for (const file of files) {
-    currentManifest[file.relativePath] = fileMD5(file.fullPath);
+    const key =
+      file.ossKey || prefix + file.relativePath.split(path.sep).join("/");
+    currentManifest[key] = fileMD5(file.fullPath);
   }
 
   // 对比 manifest
@@ -180,24 +193,27 @@ async function run() {
     accessKeySecret: config.accessKeySecret,
   });
 
-  const prefix = config.prefix.endsWith("/")
-    ? config.prefix
-    : config.prefix + "/";
-
   let successCount = 0;
   let failCount = 0;
   const uploadedFiles = [];
 
+  // 构建 ossKey → file 映射
+  const fileMap = new Map();
+  for (const file of files) {
+    const key =
+      file.ossKey || prefix + file.relativePath.split(path.sep).join("/");
+    fileMap.set(key, file);
+  }
+
   for (let i = 0; i < toUpload.length; i++) {
-    const relativePath = toUpload[i];
-    const localPath = path.join(DIST_DIR, relativePath);
-    // OSS 对象键使用正斜杠
-    const ossKey = prefix + relativePath.split(path.sep).join("/");
+    const ossKey = toUpload[i];
+    const file = fileMap.get(ossKey);
+    const localPath = file.fullPath;
 
     try {
       await client.put(ossKey, localPath);
       successCount++;
-      uploadedFiles.push(relativePath);
+      uploadedFiles.push(ossKey);
       console.log(`  [${i + 1}/${toUpload.length}] ✓ ${ossKey}`);
     } catch (err) {
       failCount++;
