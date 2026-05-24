@@ -137,17 +137,10 @@ async function run() {
   console.log(`扫描 dist/gallery/ ...\n`);
   const files = walkDir(DIST_DIR);
 
-  // 额外包含 dist/gallery.html（构建时从 dist/gallery/index.html 移出）
-  const galleryHtml = path.join(projectRoot, "dist", "gallery.html");
-  if (fs.existsSync(galleryHtml)) {
-    files.push({ fullPath: galleryHtml, ossKey: "gallery.html" });
-  }
-
   const currentManifest = {};
 
   for (const file of files) {
-    const key =
-      file.ossKey || prefix + file.relativePath.split(path.sep).join("/");
+    const key = prefix + file.relativePath.split(path.sep).join("/");
     currentManifest[key] = fileMD5(file.fullPath);
   }
 
@@ -200,8 +193,7 @@ async function run() {
   // 构建 ossKey → file 映射
   const fileMap = new Map();
   for (const file of files) {
-    const key =
-      file.ossKey || prefix + file.relativePath.split(path.sep).join("/");
+    const key = prefix + file.relativePath.split(path.sep).join("/");
     fileMap.set(key, file);
   }
 
