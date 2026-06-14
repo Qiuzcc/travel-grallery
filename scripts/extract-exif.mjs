@@ -268,8 +268,11 @@ async function run() {
       }
 
       if (result.tags.DateTimeOriginal) {
+        // exif-parser uses Date.UTC() to create the timestamp, treating EXIF local time as UTC.
+        // We must use UTC getters to recover the original local time stored in EXIF.
         const d = new Date(result.tags.DateTimeOriginal * 1000);
-        date = d.toISOString().split("T")[0];
+        const pad = (n) => String(n).padStart(2, "0");
+        date = `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`;
       }
 
       if (result.tags.ImageWidth && result.tags.ImageHeight) {

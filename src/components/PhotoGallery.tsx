@@ -15,10 +15,16 @@ interface DateGroup {
   photos: PhotoItem[]
 }
 
+/** Extract date-only part (YYYY-MM-DD) for grouping; handles both 'YYYY-MM-DD' and 'YYYY-MM-DD HH:mm' */
+function dateOnly(dateStr: string): string {
+  return dateStr.split(' ')[0]
+}
+
 function groupByDate(photos: PhotoItem[]): DateGroup[] {
   const map = new Map<string, PhotoItem[]>()
   for (const photo of photos) {
-    const key = photo.date || '未知日期'
+    const raw = photo.date || ''
+    const key = raw ? dateOnly(raw) : '未知日期'
     if (!map.has(key)) map.set(key, [])
     map.get(key)!.push(photo)
   }
@@ -29,6 +35,7 @@ function groupByDate(photos: PhotoItem[]): DateGroup[] {
 
 function formatDate(dateStr: string): string {
   if (!dateStr || dateStr === '未知日期') return '未知日期'
+  // dateStr is already date-only (YYYY-MM-DD) from groupByDate
   const parts = dateStr.split('-')
   if (parts.length === 3) {
     return `${parts[1]}月${parts[2]}日`
