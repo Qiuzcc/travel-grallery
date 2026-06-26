@@ -2800,6 +2800,511 @@
           "aspectRatio": "landscape"
         }
       ]
+    },
+    {
+      "name": "弥勒市",
+      "lat": 24.411774,
+      "lng": 103.414817,
+      "photos": [
+        {
+          "id": "DJI_20260615160538_0002_D",
+          "src": "/gallery/弥勒市/DJI_20260615160538_0002_D.JPG",
+          "thumbnail": "/gallery/弥勒市/thumbnails/DJI_20260615160538_0002_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-15 16:05",
+          "lat": 24.628347583333333,
+          "lng": 103.33060469444445,
+          "location": "云南省红河哈尼族彝族自治州弥勒市西三镇G80广昆高速",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260615170627_0018_D",
+          "src": "/gallery/弥勒市/DJI_20260615170627_0018_D.JPG",
+          "thumbnail": "/gallery/弥勒市/thumbnails/DJI_20260615170627_0018_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-15 17:06",
+          "lat": 24.09151511111111,
+          "lng": 103.41267527777778,
+          "location": "云南省红河哈尼族彝族自治州弥勒市竹园镇101县道",
+          "aspectRatio": "landscape"
+        }
+      ]
+    },
+    {
+      "name": "蒙自市",
+      "lat": 23.396111,
+      "lng": 103.364936,
+      "photos": [
+        {
+          "id": "IMG_3213",
+          "src": "/gallery/蒙自市/IMG_3213.JPG",
+          "thumbnail": "/gallery/蒙自市/thumbnails/IMG_3213_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-16 14:50",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG_3220",
+          "src": "/gallery/蒙自市/IMG_3220.JPG",
+          "thumbnail": "/gallery/蒙自市/thumbnails/IMG_3220_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-16 14:53",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260616162123_0027_D",
+          "src": "/gallery/蒙自市/DJI_20260616162123_0027_D.JPG",
+          "thumbnail": "/gallery/蒙自市/thumbnails/DJI_20260616162123_0027_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-16 16:21",
+          "lat": 23.45785011111111,
+          "lng": 103.44231311111112,
+          "location": "云南省红河哈尼族彝族自治州蒙自市西北勒乡朵古",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260616175652",
+          "src": "/gallery/蒙自市/IMG20260616175652.jpg",
+          "thumbnail": "/gallery/蒙自市/thumbnails/IMG20260616175652_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-16 17:56",
+          "lat": 23.46518611111111,
+          "lng": 103.41060277777778,
+          "location": "云南省红河哈尼族彝族自治州蒙自市草坝镇G8011开河高速",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260616195721_0044_D",
+          "src": "/gallery/蒙自市/DJI_20260616195721_0044_D.JPG",
+          "thumbnail": "/gallery/蒙自市/thumbnails/DJI_20260616195721_0044_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-16 19:57",
+          "lat": 23.366028694444445,
+          "lng": 103.36631183333333,
+          "location": "云南省红河哈尼族彝族自治州蒙自市观澜街道云南省体育彩票管理中心红河销售管理部凤凰雅苑",
+          "aspectRatio": "landscape"
+        }
+      ]
+    },
+    {
+      "name": "石屏县",
+      "lat": 23.705707,
+      "lng": 102.496138,
+      "photos": [
+        {
+          "id": "DJI_20260617154440_0005_D",
+          "src": "/gallery/石屏县/DJI_20260617154440_0005_D.JPG",
+          "thumbnail": "/gallery/石屏县/thumbnails/DJI_20260617154440_0005_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-17 15:44",
+          "lat": 23.767583666666667,
+          "lng": 102.17624444444445,
+          "location": "云南省红河哈尼族彝族自治州石屏县宝秀镇G5615天猴高速",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260617154647_0008_D",
+          "src": "/gallery/石屏县/DJI_20260617154647_0008_D.JPG",
+          "thumbnail": "/gallery/石屏县/thumbnails/DJI_20260617154647_0008_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-17 15:46",
+          "lat": 23.774988805555555,
+          "lng": 102.17532572222223,
+          "location": "云南省玉溪市元江哈尼族彝族傣族自治县甘庄街道G5615天猴高速撮科停车区(天猴高速天保方向)",
+          "aspectRatio": "landscape"
+        }
+      ]
+    },
+    {
+      "name": "景洪市",
+      "lat": 22.011792,
+      "lng": 100.799595,
+      "photos": [
+        {
+          "id": "IMG20260618121438",
+          "src": "/gallery/景洪市/IMG20260618121438.jpg",
+          "thumbnail": "/gallery/景洪市/thumbnails/IMG20260618121438_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 12:14",
+          "lat": 22.168000000000003,
+          "lng": 100.86341944444443,
+          "location": "云南省西双版纳傣族自治州景洪市大渡岗乡213国道野象谷景区",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260618170839",
+          "src": "/gallery/景洪市/IMG20260618170839.jpg",
+          "thumbnail": "/gallery/景洪市/thumbnails/IMG20260618170839_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 17:08",
+          "lat": 22.005608333333335,
+          "lng": 100.80505277777777,
+          "location": "云南省西双版纳傣族自治州景洪市允景洪街道重庆·爆火锅(泼水广场店)西双十贰城商业中心",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260618202426_0031_D",
+          "src": "/gallery/景洪市/DJI_20260618202426_0031_D.JPG",
+          "thumbnail": "/gallery/景洪市/thumbnails/DJI_20260618202426_0031_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 20:24",
+          "lat": 22.004197416666667,
+          "lng": 100.82902247222222,
+          "location": "云南省西双版纳傣族自治州景洪市江北街道西双版纳景洪缇香度假酒店(告庄星光夜市店)",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260618203004_0041_D",
+          "src": "/gallery/景洪市/DJI_20260618203004_0041_D.JPG",
+          "thumbnail": "/gallery/景洪市/thumbnails/DJI_20260618203004_0041_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 20:30",
+          "lat": 22.005659305555554,
+          "lng": 100.83078327777777,
+          "location": "云南省西双版纳傣族自治州景洪市江北街道勐罕路",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260618203251_0045_D",
+          "src": "/gallery/景洪市/DJI_20260618203251_0045_D.JPG",
+          "thumbnail": "/gallery/景洪市/thumbnails/DJI_20260618203251_0045_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 20:32",
+          "lat": 22.000208166666667,
+          "lng": 100.83706166666666,
+          "location": "云南省西双版纳傣族自治州景洪市江北街道朝露度假酒店",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260618205406",
+          "src": "/gallery/景洪市/IMG20260618205406.jpg",
+          "thumbnail": "/gallery/景洪市/thumbnails/IMG20260618205406_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 20:54",
+          "lat": 22.003788888888888,
+          "lng": 100.81191388888888,
+          "location": "云南省西双版纳傣族自治州景洪市允景洪街道滨江大道22号白象沙滩",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260618210225",
+          "src": "/gallery/景洪市/IMG20260618210225.jpg",
+          "thumbnail": "/gallery/景洪市/thumbnails/IMG20260618210225_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-18 21:02",
+          "lat": 22.005655555555556,
+          "lng": 100.81202222222223,
+          "location": "云南省西双版纳傣族自治州景洪市允景洪街道滨江大道20号",
+          "aspectRatio": "landscape"
+        }
+      ]
+    },
+    {
+      "name": "勐海县",
+      "lat": 21.957323,
+      "lng": 100.452444,
+      "photos": [
+        {
+          "id": "IMG20260619121153",
+          "src": "/gallery/勐海县/IMG20260619121153.jpg",
+          "thumbnail": "/gallery/勐海县/thumbnails/IMG20260619121153_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-19 12:11",
+          "lat": 21.9472,
+          "lng": 100.36524444444444,
+          "location": "云南省西双版纳傣族自治州勐海县勐遮镇曼恩祖传草医接骨",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260619123810_0016_D",
+          "src": "/gallery/勐海县/DJI_20260619123810_0016_D.JPG",
+          "thumbnail": "/gallery/勐海县/thumbnails/DJI_20260619123810_0016_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-19 12:38",
+          "lat": 21.95704963888889,
+          "lng": 100.33104572222221,
+          "location": "云南省西双版纳傣族自治州勐海县勐遮镇019乡道",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260619123901_0019_D",
+          "src": "/gallery/勐海县/DJI_20260619123901_0019_D.JPG",
+          "thumbnail": "/gallery/勐海县/thumbnails/DJI_20260619123901_0019_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-19 12:39",
+          "lat": 21.958715694444443,
+          "lng": 100.3286263611111,
+          "location": "云南省西双版纳傣族自治州勐海县勐遮镇019乡道",
+          "aspectRatio": "landscape"
+        }
+      ]
+    },
+    {
+      "name": "腾冲市",
+      "lat": 25.020283,
+      "lng": 98.490276,
+      "photos": [
+        {
+          "id": "IMG20260620180459",
+          "src": "/gallery/腾冲市/IMG20260620180459.jpg",
+          "thumbnail": "/gallery/腾冲市/thumbnails/IMG20260620180459_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-20 18:04",
+          "lat": 25.008430555555556,
+          "lng": 98.45484166666667,
+          "location": "云南省保山市腾冲市和顺镇腾冲木棉朴宿民宿和顺古镇景区",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260620182452",
+          "src": "/gallery/腾冲市/IMG20260620182452.jpg",
+          "thumbnail": "/gallery/腾冲市/thumbnails/IMG20260620182452_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-20 18:24",
+          "lat": 25.007725,
+          "lng": 98.44996944444445,
+          "location": "云南省保山市腾冲市和顺镇和顺古镇景区-张氏宗祠",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260620183429",
+          "src": "/gallery/腾冲市/IMG20260620183429.jpg",
+          "thumbnail": "/gallery/腾冲市/thumbnails/IMG20260620183429_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-20 18:34",
+          "lat": 25.00771388888889,
+          "lng": 98.45006666666667,
+          "location": "云南省保山市腾冲市和顺镇和顺古镇景区-张氏宗祠",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260620190427",
+          "src": "/gallery/腾冲市/IMG20260620190427.jpg",
+          "thumbnail": "/gallery/腾冲市/thumbnails/IMG20260620190427_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-20 19:04",
+          "lat": 25.007886111111112,
+          "lng": 98.45004444444444,
+          "location": "云南省保山市腾冲市和顺镇和顺古镇景区-张氏宗祠",
+          "aspectRatio": "portrait"
+        },
+        {
+          "id": "IMG20260620193438",
+          "src": "/gallery/腾冲市/IMG20260620193438.jpg",
+          "thumbnail": "/gallery/腾冲市/thumbnails/IMG20260620193438_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-20 19:34",
+          "lat": 25.012808333333332,
+          "lng": 98.45631944444445,
+          "location": "云南省保山市腾冲市和顺镇水利碑和顺古镇景区",
+          "aspectRatio": "portrait"
+        }
+      ]
+    },
+    {
+      "name": "大理市",
+      "lat": 25.678466,
+      "lng": 100.301614,
+      "photos": [
+        {
+          "id": "IMG20260622154709",
+          "src": "/gallery/大理市/IMG20260622154709.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260622154709_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-22 15:47",
+          "lat": 25.746886111111113,
+          "lng": 100.22715555555556,
+          "location": "云南省大理白族自治州大理市海东镇环海东路",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260622182316",
+          "src": "/gallery/大理市/IMG20260622182316.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260622182316_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-22 18:23",
+          "lat": 25.887380555555556,
+          "lng": 100.21530833333334,
+          "location": "云南省大理白族自治州大理市海东镇环海东路",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260622192718",
+          "src": "/gallery/大理市/IMG20260622192718.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260622192718_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-22 19:27",
+          "lat": 25.836127777777776,
+          "lng": 100.21321944444445,
+          "location": "云南省大理白族自治州大理市挖色镇环海东路鹿鹅山遗址",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260622194644",
+          "src": "/gallery/大理市/IMG20260622194644.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260622194644_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-22 19:46",
+          "lat": 25.809116666666668,
+          "lng": 100.22234444444445,
+          "location": "云南省大理白族自治州大理市海东镇小普陀",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260623201648",
+          "src": "/gallery/大理市/IMG20260623201648.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260623201648_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-23 20:16",
+          "lat": 25.536097222222224,
+          "lng": 100.20761388888889,
+          "location": "云南省大理白族自治州大理市下关街道凌云之境观景农场",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260623203523_0024_D",
+          "src": "/gallery/大理市/DJI_20260623203523_0024_D.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/DJI_20260623203523_0024_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-23 20:35",
+          "lat": 25.53812438888889,
+          "lng": 100.209131,
+          "location": "云南省大理白族自治州大理市下关街道084县道",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260623203632_0029_D",
+          "src": "/gallery/大理市/DJI_20260623203632_0029_D.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/DJI_20260623203632_0029_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-23 20:36",
+          "lat": 25.537730916666668,
+          "lng": 100.20903144444445,
+          "location": "云南省大理白族自治州大理市下关街道084县道",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG20260623204735",
+          "src": "/gallery/大理市/IMG20260623204735.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG20260623204735_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-23 20:47",
+          "lat": 25.536919444444447,
+          "lng": 100.20770555555556,
+          "location": "云南省大理白族自治州大理市下关街道084县道",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "mmexport1782291948276",
+          "src": "/gallery/大理市/mmexport1782291948276.jpg",
+          "thumbnail": "/gallery/大理市/thumbnails/mmexport1782291948276_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 17:09",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG_3293",
+          "src": "/gallery/大理市/IMG_3293.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG_3293_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 18:47",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260624190050_0054_D",
+          "src": "/gallery/大理市/DJI_20260624190050_0054_D.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/DJI_20260624190050_0054_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 19:00",
+          "lat": 25.77405411111111,
+          "lng": 100.14303691666667,
+          "location": "云南省大理白族自治州大理市银桥镇酉辰居(民宿)",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG_3305",
+          "src": "/gallery/大理市/IMG_3305.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG_3305_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 19:13",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "IMG_3311",
+          "src": "/gallery/大理市/IMG_3311.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/IMG_3311_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 20:09",
+          "lat": 0,
+          "lng": 0,
+          "location": "",
+          "aspectRatio": "landscape"
+        },
+        {
+          "id": "DJI_20260624203744_0079_D",
+          "src": "/gallery/大理市/DJI_20260624203744_0079_D.JPG",
+          "thumbnail": "/gallery/大理市/thumbnails/DJI_20260624203744_0079_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-24 20:37",
+          "lat": 25.93129877777778,
+          "lng": 100.16977475,
+          "location": "云南省大理白族自治州大理市双廊镇环海路",
+          "aspectRatio": "landscape"
+        }
+      ]
     }
   ]
 }
