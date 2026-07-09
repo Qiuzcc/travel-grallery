@@ -1,5 +1,5 @@
-import { useMemo, useState, useRef, useEffect } from 'react'
-import { MapPin, Calendar, Camera } from 'lucide-react'
+import { useMemo, useState, useRef, useEffect, useCallback } from 'react'
+import { MapPin, Calendar, Camera, Rss, Check } from 'lucide-react'
 import type { CityData } from '@/data/photos'
 
 const DOUYIN_QR_URL = import.meta.env.VITE_DOUYIN_QR_URL as string | undefined
@@ -69,6 +69,39 @@ function DouyinQrPopover() {
   )
 }
 
+function AtomSubscribeButton() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = useCallback(async () => {
+    const url = `${window.location.origin}/gallery/atom.xml`
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Fallback for browsers that don't support clipboard API
+      const input = document.createElement('input')
+      input.value = url
+      document.body.appendChild(input)
+      input.select()
+      document.execCommand('copy')
+      document.body.removeChild(input)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }, [])
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/[0.06] backdrop-blur-xl border border-white/[0.1] text-foreground hover:text-primary hover:bg-white/[0.12] hover:border-white/[0.18] transition-all duration-200"
+      title={copied ? '已复制' : 'Atom 订阅'}
+    >
+      {copied ? <Check className="h-4 w-4 text-green-400" /> : <Rss className="h-4 w-4" />}
+    </button>
+  )
+}
+
 interface HeroProps {
   cities: CityData[]
 }
@@ -105,8 +138,9 @@ export function Hero({ cities }: HeroProps) {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, hsl(222 30% 4%) 100%)' }} />
       </div>
 
-      {/* Douyin icon - top right */}
-      <div className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20">
+      {/* Action icons - top right */}
+      <div className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 flex items-center gap-2">
+        <AtomSubscribeButton />
         <DouyinQrPopover />
       </div>
 

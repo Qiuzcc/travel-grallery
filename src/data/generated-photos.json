@@ -3305,6 +3305,25 @@
           "aspectRatio": "landscape"
         }
       ]
+    },
+    {
+      "name": "丽江市",
+      "lat": 26.855165,
+      "lng": 100.225936,
+      "photos": [
+        {
+          "id": "DJI_20260627151538_0040_D",
+          "src": "/gallery/丽江市/DJI_20260627151538_0040_D.JPG",
+          "thumbnail": "/gallery/丽江市/thumbnails/DJI_20260627151538_0040_D_thumb.jpg",
+          "title": "",
+          "description": "",
+          "date": "2026-06-27 15:15",
+          "lat": 26.981015888888887,
+          "lng": 100.41564291666667,
+          "location": "云南省丽江市古城区文化街道丽宁公路",
+          "aspectRatio": "landscape"
+        }
+      ]
     }
   ]
 }
