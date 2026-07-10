@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useEffect } from 'react'
 import { MapView } from '@/components/MapView'
 import { PhotoGallery } from '@/components/PhotoGallery'
 import { Lightbox } from '@/components/Lightbox'
@@ -6,8 +6,29 @@ import { Hero } from '@/components/Hero'
 import { galleryData } from '@/data/photos'
 import type { PhotoItem } from '@/data/photos'
 
+/** 从 URL hash 中解析城市名，如 #city=丽江市 */
+function getCityFromHash(): string | null {
+  const hash = window.location.hash.slice(1) // 去掉开头的 #
+  const params = new URLSearchParams(hash)
+  const city = params.get('city')
+  return city ? decodeURIComponent(city) : null
+}
+
+/** 根据城市名查找在 cities 数组中的索引 */
+function findCityIndex(cityName: string): number {
+  return galleryData.cities.findIndex((c) => c.name === cityName)
+}
+
 function App() {
-  const [activeCityIndex, setActiveCityIndex] = useState(galleryData.cities.length - 1)
+  const [activeCityIndex, setActiveCityIndex] = useState(() => {
+    // 初始化时尝试从 hash 中读取城市
+    const cityName = getCityFromHash()
+    if (cityName) {
+      const idx = findCityIndex(cityName)
+      if (idx !== -1) return idx
+    }
+    return galleryData.cities.length - 1
+  })
   const [lightboxPhoto, setLightboxPhoto] = useState<PhotoItem | null>(null)
 
   const cities = useMemo(
@@ -33,6 +54,32 @@ function App() {
     if (index >= 0 && index < galleryData.cities.length) {
       setActiveCityIndex(index)
     }
+  }, [])
+
+  // activeCityIndex 变化时同步更新 hash
+  useEffect(() => {
+    const city = galleryData.cities[activeCityIndex]
+    if (city) {
+      const newHash = `#city=${encodeURIComponent(city.name)}`
+      if (window.location.hash !== newHash) {
+        window.location.hash = newHash
+      }
+    }
+  }, [activeCityIndex])
+
+  // 监听浏览器前进/后退导致的 hash 变化
+  useEffect(() => {
+    const handleHashChange = () => {
+      const cityName = getCityFromHash()
+      if (cityName) {
+        const idx = findCityIndex(cityName)
+        if (idx !== -1) {
+          setActiveCityIndex(idx)
+        }
+      }
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
   const handlePhotoClick = useCallback((photo: PhotoItem) => {
