@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "exif": "node scripts/extract-exif.mjs",
+    "fill-titles": "node scripts/fill-titles.mjs",
     "build:data": "node scripts/build-data.mjs",
     "dev": "node scripts/build-data.mjs && vite",
     "build": "node scripts/build-data.mjs && tsc -b && vite build",

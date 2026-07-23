@@ -5,7 +5,7 @@
  * 用法: 在项目根目录运行 node scripts/fill-titles.mjs
  *
  * 脚本会:
- *   - 读取 public/gallery/analysis_results_20260710_233508.json
+ *   - 读取 public/gallery/analysis_results.json
  *   - 遍历各个城市的分析结果
  *   - 将标题和描述填充到对应城市 photos.json 的照片对象中
  *   - 如果 photos.json 中已有标题或描述，则不覆盖
