@@ -3,7 +3,8 @@
  * EXIF 照片数据提取脚本
  *
  * 用法 (在项目根目录):
- *   npm run exif -- public/gallery/北京市
+ *   npm run exif                        # 批量处理所有中文名目录
+ *   npm run exif -- public/gallery/北京市  # 处理单个目录
  *
  * 脚本会:
  *   - 扫描指定目录下所有图片文件
@@ -36,49 +37,29 @@ const GEOCODE_DELAY_MS = 200; // Rate limiting: 200ms between requests
 // --- 参数校验 ---
 const inputArg = process.argv[2];
 
-if (!inputArg) {
-  console.error(`错误: 请指定城市目录路径\n`);
-  console.error(`用法: npm run exif -- <目录路径>`);
-  console.error(`示例: npm run exif -- public/gallery/北京市`);
-  console.error(`      npm run exif -- public/gallery/荣成市\n`);
-  console.error(`目录路径相对于项目根目录，例如 public/gallery/北京市`);
-  process.exit(1);
+// 判断目录名是否包含中文
+function hasChineseChar(name) {
+  return /[\u4e00-\u9fff]/.test(name);
 }
 
-// 解析目录路径（支持相对路径和绝对路径）
-const targetDir = path.isAbsolute(inputArg)
-  ? inputArg
-  : path.resolve(projectRoot, inputArg);
+// 扫描 public/gallery/ 下所有中文名子目录
+function getChineseDirs() {
+  const galleryDir = path.join(projectRoot, "public", "gallery");
+  if (!fs.existsSync(galleryDir)) return [];
 
-// 校验目录是否存在
-if (!fs.existsSync(targetDir)) {
-  console.error(`错误: 目录不存在: ${targetDir}`);
-  console.error(`\n请先创建目录并放入照片，例如:`);
-  console.error(`  mkdir -p public/gallery/荣成市`);
-  console.error(`  cp 照片/*.jpg public/gallery/荣成市/`);
-  process.exit(1);
+  return fs
+    .readdirSync(galleryDir)
+    .filter((name) => {
+      const fullPath = path.join(galleryDir, name);
+      try {
+        return fs.statSync(fullPath).isDirectory() && hasChineseChar(name);
+      } catch {
+        return false;
+      }
+    })
+    .map((name) => path.join(galleryDir, name))
+    .sort();
 }
-
-// 校验是否为目录
-const stat = fs.statSync(targetDir);
-if (!stat.isDirectory()) {
-  console.error(`错误: ${targetDir} 不是一个目录`);
-  process.exit(1);
-}
-
-// 校验目录是否在 public/gallery/ 下
-const galleryDir = path.join(projectRoot, "public", "gallery");
-if (!targetDir.startsWith(galleryDir + path.sep)) {
-  console.error(`错误: 目录必须在 public/gallery/ 下`);
-  console.error(`  提供的路径: ${inputArg}`);
-  console.error(`  期望路径格式: public/gallery/城市名`);
-  process.exit(1);
-}
-
-// 城市名为目录名
-const cityName = path.basename(targetDir);
-const outputFile = path.join(targetDir, "photos.json");
-const thumbDir = path.join(targetDir, "thumbnails");
 
 // --- 读取 .env 文件获取 AMap Key ---
 function loadEnvKey() {
@@ -152,16 +133,6 @@ function sleep(ms) {
 }
 
 // --- 工具函数 ---
-function getImageFiles() {
-  return fs
-    .readdirSync(targetDir)
-    .filter((f) => {
-      const ext = path.extname(f).toLowerCase();
-      return EXTENSIONS.includes(ext);
-    })
-    .sort();
-}
-
 function getAspectRatio(width, height) {
   if (!width || !height) return undefined;
   const ratio = width / height;
@@ -170,20 +141,55 @@ function getAspectRatio(width, height) {
   return "square";
 }
 
-function loadExistingData() {
-  try {
-    if (fs.existsSync(outputFile)) {
-      const raw = fs.readFileSync(outputFile, "utf-8");
-      return JSON.parse(raw);
-    }
-  } catch {
-    // ignore parse errors
+// --- 处理单个目录 ---
+async function processDirectory(targetDir) {
+  // 校验目录是否存在
+  if (!fs.existsSync(targetDir)) {
+    console.error(`错误: 目录不存在: ${targetDir}`);
+    process.exit(1);
   }
-  return null;
-}
 
-// --- 主逻辑 ---
-async function run() {
+  // 校验是否为目录
+  const stat = fs.statSync(targetDir);
+  if (!stat.isDirectory()) {
+    console.error(`错误: ${targetDir} 不是一个目录`);
+    process.exit(1);
+  }
+
+  // 校验目录是否在 public/gallery/ 下
+  const galleryDir = path.join(projectRoot, "public", "gallery");
+  if (!targetDir.startsWith(galleryDir + path.sep)) {
+    console.error(`错误: 目录必须在 public/gallery/ 下`);
+    process.exit(1);
+  }
+
+  // 城市名为目录名
+  const cityName = path.basename(targetDir);
+  const outputFile = path.join(targetDir, "photos.json");
+  const thumbDir = path.join(targetDir, "thumbnails");
+
+  function getImageFiles() {
+    return fs
+      .readdirSync(targetDir)
+      .filter((f) => {
+        const ext = path.extname(f).toLowerCase();
+        return EXTENSIONS.includes(ext);
+      })
+      .sort();
+  }
+
+  function loadExistingData() {
+    try {
+      if (fs.existsSync(outputFile)) {
+        const raw = fs.readFileSync(outputFile, "utf-8");
+        return JSON.parse(raw);
+      }
+    } catch {
+      // ignore parse errors
+    }
+    return null;
+  }
+
   const files = getImageFiles();
 
   if (files.length === 0) {
@@ -403,7 +409,52 @@ async function run() {
   }
 }
 
-run().catch((err) => {
+// --- 入口 ---
+async function main() {
+  if (inputArg) {
+    // 单目录模式
+    const targetDir = path.isAbsolute(inputArg)
+      ? inputArg
+      : path.resolve(projectRoot, inputArg);
+    await processDirectory(targetDir);
+  } else {
+    // 批量模式：遍历所有中文名目录
+    const dirs = getChineseDirs();
+
+    if (dirs.length === 0) {
+      console.error("错误: public/gallery/ 下未找到中文名目录");
+      console.error("请先创建目录并放入照片，例如:");
+      console.error("  mkdir -p public/gallery/北京市");
+      console.error("  cp 照片/*.jpg public/gallery/北京市/");
+      process.exit(1);
+    }
+
+    console.log(`找到 ${dirs.length} 个中文名目录，开始批量处理...\n`);
+
+    let successCount = 0;
+    let failCount = 0;
+
+    for (const dir of dirs) {
+      const dirName = path.basename(dir);
+      try {
+        console.log(`\n${"=".repeat(60)}`);
+        console.log(`处理: ${dirName}`);
+        console.log(`${"=".repeat(60)}`);
+        await processDirectory(dir);
+        successCount++;
+      } catch (err) {
+        failCount++;
+        console.error(`\n[${dirName}] 处理失败:`, err.message);
+      }
+    }
+
+    console.log(`\n${"=".repeat(60)}`);
+    console.log(`批量处理完成! 成功: ${successCount}, 失败: ${failCount}`);
+    console.log(`${"=".repeat(60)}`);
+  }
+}
+
+main().catch((err) => {
   console.error("脚本执行出错:", err);
   process.exit(1);
 });
