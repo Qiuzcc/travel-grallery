@@ -14,6 +14,7 @@
 ```
 public/gallery/        # 按城市分组的原始照片及 photos.json
 scripts/
+  auto-divide.mjs    # 照片自动按县区分类脚本
   extract-exif.mjs    # EXIF 数据提取 + 缩略图生成脚本
   build-data.mjs      # 照片数据聚合脚本（dev/build 前自动执行）
   deploy-oss.mjs      # 阿里云 OSS 增量部署脚本
@@ -55,6 +56,25 @@ cp .env.example .env
 ```bash
 npm install
 ```
+
+### 自动按县区分类照片
+
+将未分类的照片放入 `public/gallery/auto-divide/` 目录，运行：
+
+```bash
+npm run auto-divide
+```
+
+脚本会自动：
+
+- 扫描 `auto-divide/` 下所有图片（jpg/jpeg/png/heic）
+- 从 EXIF 中提取 GPS 坐标
+- 通过高德逆地理编码 API 获取县区级行政区名称
+- 在 `public/gallery/` 下以县区全称创建目录（已存在则跳过）
+- 将照片移动到对应县区目录
+- 无 GPS 信息的照片移至 `public/gallery/no-exif/`
+
+> 需要配置 `VITE_AMAP_REST_API_KEY` 或 `AMAP_WEB_SERVICE_KEY`。
 
 ### 添加照片并提取 EXIF 数据
 
