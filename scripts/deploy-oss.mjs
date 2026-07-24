@@ -65,14 +65,19 @@ function fileMD5(filePath) {
 }
 
 // --- 递归扫描目录 ---
-function walkDir(dir, baseDir = dir) {
+// excludeDirs: 要跳过的子目录名称列表（仅匹配顶层目录名）
+function walkDir(dir, baseDir = dir, excludeDirs = []) {
   const results = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      results.push(...walkDir(fullPath, baseDir));
+      if (excludeDirs.includes(entry.name)) {
+        console.log(`  [跳过] ${path.relative(baseDir, fullPath)}/`);
+        continue;
+      }
+      results.push(...walkDir(fullPath, baseDir, excludeDirs));
     } else if (entry.isFile()) {
       const relativePath = path.relative(baseDir, fullPath);
       results.push({ fullPath, relativePath });
@@ -133,9 +138,12 @@ async function run() {
     }
   }
 
+  // 要排除的子目录（不需要部署到 OSS 的目录）
+  const EXCLUDE_DIRS = ["no-exif", "auto-divide"];
+
   // 扫描 dist/gallery/ 下所有文件
   console.log(`扫描 dist/gallery/ ...\n`);
-  const files = walkDir(DIST_DIR);
+  const files = walkDir(DIST_DIR, DIST_DIR, EXCLUDE_DIRS);
 
   const currentManifest = {};
 
