@@ -13,8 +13,10 @@
 
 ```
 public/gallery/        # 按城市分组的原始照片及 photos.json
+public/raw/            # 待分类的原始照片（通过 classify 脚本自动归类）
 scripts/
   extract-exif.mjs    # EXIF 数据提取 + 缩略图生成脚本
+  classify-raw.mjs    # raw 照片自动分类脚本（按 GPS 自动归类到城市目录）
   build-data.mjs      # 照片数据聚合脚本（dev/build 前自动执行）
   deploy-oss.mjs      # 阿里云 OSS 增量部署脚本
 src/
@@ -55,6 +57,25 @@ cp .env.example .env
 ```bash
 npm install
 ```
+
+### 自动分类 raw 照片
+
+如果你有未经整理的照片，可将其放入 `public/raw/` 目录，然后运行：
+
+```bash
+npm run classify
+```
+
+脚本会自动：
+
+- 提取每张照片的 EXIF GPS 坐标
+- 通过高德逆地理编码 API 获取行政区划（需配置 `VITE_AMAP_REST_API_KEY`）
+- 按分区策略将照片移动到 `public/gallery/<目标目录>/`：
+  - **西藏/新疆/青海/内蒙古**：按县级行政区划分（如"哈巴河县"、"乌鲁木齐市天山区"）
+  - **其他省份**：按市一级行政区划分（如"南京市"、"宁波市"）
+- 无法提取 GPS 的照片移入 `public/raw/unclassified/`
+
+分类完成后，对新增的城市目录运行 EXIF 提取脚本即可生成缩略图和元数据。
 
 ### 添加照片并提取 EXIF 数据
 
