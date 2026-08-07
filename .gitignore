@@ -13,3 +13,6 @@ public
 
 # OSS 部署 manifest
 .oss-manifest.json
+
+# 构建生成的图片数据
+src/data/generated-photos.json
