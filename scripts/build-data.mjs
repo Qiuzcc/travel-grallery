@@ -62,8 +62,8 @@ function toISODate(dateStr) {
 function generateAtomFeed(cities) {
   const now = new Date().toISOString();
   // SITE_URL already contains the base path (e.g. https://example.com/gallery), so don't append BASE_PATH again
-  const siteUrl = SITE_URL ? SITE_URL.replace(/\/?$/, '/') : BASE_PATH;
-  const selfUrl = siteUrl + 'atom.xml';
+  const siteUrl = SITE_URL ? SITE_URL.replace(/\/?$/, "/") : BASE_PATH;
+  const selfUrl = siteUrl + "atom.xml";
 
   const entries = cities
     .map((city) => {
@@ -85,7 +85,7 @@ function generateAtomFeed(cities) {
         const photoPath = coverPhoto.thumbnail || coverPhoto.src;
         // photoPath starts with /gallery/..., strip it since SITE_URL already contains the base path
         if (SITE_URL) {
-          const relativePath = photoPath.replace(/^\/gallery\//, '');
+          const relativePath = photoPath.replace(/^\/gallery\//, "");
           return `${SITE_URL}/${relativePath}`;
         }
         return photoPath;
@@ -96,7 +96,9 @@ function generateAtomFeed(cities) {
         `<p>${escapeXml(`在${city.name}拍摄了 ${photoCount} 张照片${earliest ? `，时间从 ${earliest}${latest && latest !== earliest ? ` 到 ${latest}` : ""}` : ""}。`)}</p>`,
       ];
       if (coverUrl) {
-        contentLines.push(`<p><img src="${escapeXml(coverUrl)}" alt="${escapeXml(city.name)}" /></p>`);
+        contentLines.push(
+          `<p><img src="${escapeXml(coverUrl)}" alt="${escapeXml(city.name)}" /></p>`,
+        );
       }
       contentLines.push(`<p><a href="${escapeXml(cityUrl)}">查看原文</a></p>`);
       const content = contentLines.join("\n      ");
@@ -139,7 +141,9 @@ function getEarliestDate(photos) {
 function run() {
   // Scan public/gallery/ for subdirectories containing photos.json
   const entries = fs.readdirSync(publicDir, { withFileTypes: true });
-  const cityDirs = entries.filter((e) => e.isDirectory());
+  const cityDirs = entries.filter(
+    (e) => e.isDirectory() && e.name !== "images",
+  );
 
   const cities = [];
 

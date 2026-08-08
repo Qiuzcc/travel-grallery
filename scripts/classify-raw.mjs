@@ -204,7 +204,7 @@ function findTargetDir(districtName) {
   //    注意：使用 endsWith 而非 includes，避免
   //    "南京市玄武区" 被误匹配到 "南京市" 目录
   for (const name of dirNames) {
-    if (name.endsWith(dirName) || dirName.endsWith(name)) return name;
+    if (name.endsWith(districtName) || districtName.endsWith(name)) return name;
   }
 
   // 3. 无匹配，新建

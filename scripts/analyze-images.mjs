@@ -26,11 +26,7 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 
 /** image-analysis 项目根目录 */
-const IMAGE_ANALYSIS_DIR = path.resolve(
-  projectRoot,
-  "..",
-  "image-analysis",
-);
+const IMAGE_ANALYSIS_DIR = path.resolve(projectRoot, "..", "image-analysis");
 
 /** 默认 Python 脚本路径 */
 const DEFAULT_PYTHON_SCRIPT = path.join(IMAGE_ANALYSIS_DIR, "main.py");
@@ -107,18 +103,21 @@ export function analyzeImages(options = {}) {
 
   // 检查 Python 脚本是否存在
   if (!fs.existsSync(pythonScript)) {
-    return Promise.reject(
-      new Error(`Python 脚本不存在: ${pythonScript}`),
-    );
+    return Promise.reject(new Error(`Python 脚本不存在: ${pythonScript}`));
   }
 
   return new Promise((resolve, reject) => {
     const dirsJson = JSON.stringify(dirs);
     const args = [
       pythonScript,
-      "--base-path", basePath,
-      "--dirs", dirsJson,
-      "--api-key", resolvedApiKey,
+      "--base-path",
+      basePath,
+      "--dirs",
+      dirsJson,
+      "--api-key",
+      resolvedApiKey,
+      "--cache-file",
+      path.join(IMAGE_ANALYSIS_DIR, "analysis_cache.json"),
     ];
 
     const child = spawn(pythonPath, args, {
@@ -255,7 +254,9 @@ async function cli() {
       0,
     );
     const cities = Object.keys(results);
-    console.log(`\n✅ 分析完成: ${cities.length} 个城市, ${totalImages} 张图片`);
+    console.log(
+      `\n✅ 分析完成: ${cities.length} 个城市, ${totalImages} 张图片`,
+    );
 
     // 输出到文件（兼容旧的 workflow：fill-titles.mjs 会读取这个文件）
     const outputPath = path.join(basePath, "analysis_results.json");
@@ -268,7 +269,9 @@ async function cli() {
 }
 
 // 如果直接运行此脚本（非 import），执行 CLI 模式
-const isDirectRun = process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
+const isDirectRun =
+  process.argv[1] &&
+  fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
 if (isDirectRun) {
   cli();
 }
