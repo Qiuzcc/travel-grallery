@@ -128,14 +128,14 @@ export function Hero({ cities }: HeroProps) {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/gallery/images/hero-bg.jpg"
+          src="/gallery/images/header-bg.jpg"
           alt="摩旅风景"
           className="h-full w-full object-cover"
         />
         {/* Multi-layer gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-background/30 to-background" />
         {/* Radial vignette */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, hsl(222 30% 4%) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 55%, hsl(222 30% 4% / 0.45) 100%)' }} />
       </div>
 
       {/* Action icons - top right */}
